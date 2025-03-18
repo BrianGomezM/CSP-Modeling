@@ -28,5 +28,5 @@ Para ejecutar cada modelo, abrir MiniZinc y cargar el archivo correspondiente. L
 minizinc sudoku.mzn
 ```
 
-¡Cualquier contribución o comentario es bienvenido! 🚀
+🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 
