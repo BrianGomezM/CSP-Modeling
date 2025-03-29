@@ -50,18 +50,33 @@ constraint forall(bloque_fila, bloque_columna in rango_subcuadricula)(
     ])
 );
 
-% RESTRICCIÓN REDUNDANTE BÁSICA
-% La suma de cada fila debe ser 45 (1+2+...+9)
+% RESTRICCIONES REDUNDANTES
+% 1. La suma de cada fila debe ser 45 (1+2+...+9)
 constraint forall(fila in rango_valores)(
     sum([solucion[fila,columna] | columna in rango_valores]) = 45
 );
 
-% ESTRATEGIA DE BÚSQUEDA BÁSICA
-solve :: int_search(
-    [solucion[i,j] | i,j in rango_valores],
-    first_fail,
-    indomain_min
-) satisfy;
+% 2. La suma de cada columna debe ser 45 (1+2+...+9)
+constraint forall(columna in rango_valores)(
+    sum([solucion[fila,columna] | fila in rango_valores]) = 45
+);
+
+% 3. La suma de cada subcuadrícula debe ser 45 (1+2+...+9)
+constraint forall(bloque_fila, bloque_columna in rango_subcuadricula)(
+    sum([
+        solucion[
+            (bloque_fila-1)*tamano_subcuadricula + i, 
+            (bloque_columna-1)*tamano_subcuadricula + j
+        ] 
+        | i,j in 1..tamano_subcuadricula
+    ]) = 45
+);
+
+% RESTRICCIONES DE SIMETRÍA
+% No sé aún.
+
+solve satisfy;
+
 
 %restricciones de redundacia y simetría faltan, diferentes formas de solución -> califican
 
