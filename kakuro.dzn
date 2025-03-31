@@ -1,0 +1,24 @@
+filas = 5;      // El tablero tiene 5 filas
+columnas = 5;   // El tablero tiene 5 columnas
+
+    NEGRA,   // Esquina superior izquierda (siempre negra)
+    SUMA_V,  // Celda con pista vertical   (suma de números hacia abajo)
+    SUMA_H,  // Celda con pista horizontal (suma de números hacia derecha o izquierda)
+    NEGRA,   // Celda negra
+
+
+tipo_celda = array2d(1..filas, 1..columnas, [
+    NEGRA,  SUMA_V,  SUMA_V,  NEGRA,    NEGRA,
+    SUMA_H, BLANCA,  BLANCA,  SUMA_V,   NEGRA,
+    SUMA_H, BLANCA,  BLANCA,  BLANCA,   SUMA_V,
+    NEGRA,  SUMA_H,  BLANCA,  BLANCA,   BLANCA,
+    NEGRA,  NEGRA,   SUMA_H,  BLANCA,   BLANCA
+]);
+
+pistas = array2d(1..filas, 1..columnas, [
+    0,  4,  6,   0,  0,
+    3,  0,  0,   6,  0,
+    6,  0,  0,   0, 13, 
+    0,  8,  0,   0,  0,
+    0,  0, 12,   0,  0
+]);
