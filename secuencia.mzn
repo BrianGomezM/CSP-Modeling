@@ -30,31 +30,33 @@ constraint forall(i in RANGO)(
 );
 
 % ============= RESTRICCIONES REDUNDANTES =============
-% Estas restricciones se pueden deducir de la restricción principal,
-% pero ayudan al solver a encontrar la solución más rápidamente
-% reduciendo el espacio de búsqueda
+% Las siguientes dos restricciones son redundantes porque se pueden deducir
+% de la restricción principal. Sin embargo, son muy útiles porque reducen
+% considerablemente el tamaño del árbol de búsqueda:
 
-% 1. Primera restricción redundante: suma total
-% La suma de todos los valores en S debe ser igual a n
-% ¿Por qué? Porque cada posición en la secuencia debe contener exactamente un número
+% 1. Primera restricción redundante: x₀ + ... + xₙ₋₁ = n
+% Esta restricción es redundante porque:
+% - De la restricción principal sabemos que cada posición debe tener exactamente un número
+% - Por lo tanto, la suma de todas las apariciones debe ser igual a n
+% - Sin embargo, tenerla explícitamente ayuda al solver a podar ramas inválidas más rápido
 constraint sum(i in RANGO)(S[i]) = n;
 
-% 2. Segunda restricción redundante: suma ponderada
-% Esta restricción establece una relación entre las posiciones y frecuencias
-% Ayuda a podar el árbol de búsqueda eliminando combinaciones imposibles
+% 2. Segunda restricción redundante: (-1)x₀ + ... + (n-2)xₙ₋₁ = 0
+% Esta restricción es redundante porque:
+% - Se deduce de la propiedad fundamental de la secuencia mágica
+% - Si cada número i aparece S[i] veces, esta suma ponderada debe ser 0
+% - Ayuda al solver a identificar y eliminar combinaciones imposibles temprano
+% - Reduce significativamente el espacio de búsqueda
 constraint sum(i in RANGO)((i-1) * S[i]) = 0;
 
 % 3. Restricción de valor máximo
-% Ningún número puede aparecer más veces que el tamaño de la secuencia
-% Esta es una cota superior natural del problema
+% Ningún número puede aparecer más veces que el tamaño de la secuencia menos 1
 constraint forall(i in RANGO)(
     S[i] <= n-1
 );
 
 % ============= ESTRATEGIA DE BÚSQUEDA =============
-% Usamos la estrategia más básica sin funciones predefinidas
-% El solver decidirá la mejor manera de buscar la solución
-solve satisfy;
+solve :: int_search(S, first_fail, indomain_min) satisfy;
 
 % ============= FORMATO DE SALIDA =============
 % Mostramos la solución en un formato legible y verificable
