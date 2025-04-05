@@ -73,12 +73,23 @@ constraint forall(bloque_fila, bloque_columna in rango_subcuadricula)(
 );
 
 
-%solve satisfy;
-solve :: int_search(
-    [solucion[i,j] | i,j in rango_valores],
-    first_fail,
-    indomain_min
-) satisfy; 
+solve satisfy;
+% solve :: int_search(
+%    [solucion[i,j] | i,j in rango_valores],
+%    first_fail,
+%    indomain_min
+% ) satisfy;
+% solve :: int_search(
+%    [solucion[i,j] | i,j in rango_valores],
+%    input_order,
+%    indomain_min
+% ) satisfy;
+% solve :: int_search(
+%    [solucion[i,j] | i,j in rango_valores],
+%    smallest,
+%    indomain_median
+% ) satisfy;
+
 
 % Formato de salida para visualizar la solución
 output [
