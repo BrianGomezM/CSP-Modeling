@@ -1,0 +1,4 @@
+n = 20;% Número de cuadrados
+W = 5;% Anchura del rectángulo
+H = 17;% Altura del rectángulo
+sizes = [1, 1, 1, 1, 1, 1, 3, 4, 5, 4, 2, 1, 1, 1, 1, 1, 1, 1, 1,1]; % Un cuadrado grande (4x4) que limita las posibilidades

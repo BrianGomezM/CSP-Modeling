@@ -1,0 +1,21 @@
+nombres = {Ana, Luis, Carla};
+apellidos = {Martinez, Rodriguez, Perez};
+genero_musicales = {Rock, Electronica, Salsa};
+
+nombres_posibles = [Ana, Luis, Carla];
+apellidos_posibles = [Martinez, Rodriguez, Perez];
+musicas_posibles = [Rock, Electronica, Salsa];
+
+edades = {28, 32, 35};
+
+% Configuración especial donde una persona cumple múltiples condiciones
+nombre_mayor = Carla;
+apellido_clasico = Martinez;
+nombre_edad_fija = Carla;  % Misma persona es la mayor y tiene edad fija
+edad_fija = 35;
+apellido_excluido = Perez;
+nombre_no_jazz = Luis;  % Nota: "jazz" no existe aquí, probando flexibilidad
+apellido_no_pop = Rodriguez;  % "pop" tampoco existe
+musica_clasica = Rock;  % Forzando a que "clásico" sea Rock
+musica_pop = Electronica;
+musica_jazz = Salsa;

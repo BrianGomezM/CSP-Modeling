@@ -1,0 +1,24 @@
+% Definición de enumerados
+nombres = {JuanCarlos, AnaMaria, LuisMiguel};
+apellidos = {DeLaCruz, SanMartin, Delgado};
+genero_musicales = {Bolero, Tango, Folklore};
+
+% Valores posibles
+nombres_posibles = [JuanCarlos, AnaMaria, LuisMiguel];
+apellidos_posibles = [DeLaCruz, SanMartin, Delgado];
+musicas_posibles = [Bolero, Tango, Folklore];
+
+% Rango de edades
+edades = {50, 55, 60};
+
+% Parámetros de relaciones
+nombre_mayor = LuisMiguel;
+apellido_clasico = Delgado;
+nombre_edad_fija = AnaMaria;
+edad_fija = 55;
+apellido_excluido = DeLaCruz;
+nombre_no_jazz = JuanCarlos;
+apellido_no_pop = SanMartin;
+musica_clasica = Bolero;
+musica_pop = Tango;
+musica_jazz = Folklore;
