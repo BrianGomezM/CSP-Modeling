@@ -1,0 +1,24 @@
+% Definición de enumerados
+nombres = {Diego, Elena, Pablo};
+apellidos = {Herrera, Jimenez, Ruiz};
+genero_musicales = {Flamenco, Copla, Rumba};
+
+% Valores posibles
+nombres_posibles = [Diego, Elena, Pablo];
+apellidos_posibles = [Herrera, Jimenez, Ruiz];
+musicas_posibles = [Flamenco, Copla, Rumba];
+
+% Rango de edades
+edades = {18, 20, 22};
+
+% Parámetros de relaciones
+nombre_mayor = Pablo;
+apellido_clasico = Ruiz;
+nombre_edad_fija = Elena;
+edad_fija = 20;
+apellido_excluido = Herrera;
+nombre_no_jazz = Diego;
+apellido_no_pop = Jimenez;
+musica_clasica = Flamenco;
+musica_pop = Copla;
+musica_jazz = Rumba;

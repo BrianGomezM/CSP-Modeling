@@ -1,0 +1,24 @@
+% Definición de enumerados
+nombres = {Juan, Oscar, Dario};
+apellidos = {Lopez, Garcia, Gonzalez};
+genero_musicales = {Clasica, Pop, Jazz};
+
+% Valores posibles
+nombres_posibles = [Juan, Oscar, Dario];
+apellidos_posibles = [Lopez, Garcia, Gonzalez];
+musicas_posibles = [Clasica, Pop, Jazz];
+
+% Rango de edades
+edades = {24, 25, 26};
+
+% Parámetros de relaciones
+nombre_mayor = Juan;
+apellido_clasico = Gonzalez;
+nombre_edad_fija = Oscar;
+edad_fija = 25;
+apellido_excluido = Lopez;
+nombre_no_jazz = Dario;
+apellido_no_pop = Garcia;
+musica_clasica = Clasica;
+musica_pop = Pop;
+musica_jazz = Jazz;

@@ -1,0 +1,24 @@
+% Definición de enumerados
+nombres = {Ana, Pedro, Lucia};
+apellidos = {Silva, Mendoza, Castro};
+genero_musicales = {Salsa, Merengue, Bachata};
+
+% Valores posibles
+nombres_posibles = [Ana, Pedro, Lucia];
+apellidos_posibles = [Silva, Mendoza, Castro];
+musicas_posibles = [Salsa, Merengue, Bachata];
+
+% Rango de edades
+edades = {40, 41, 42};
+
+% Parámetros de relaciones
+nombre_mayor = Lucia;
+apellido_clasico = Castro;
+nombre_edad_fija = Pedro;
+edad_fija = 41;
+apellido_excluido = Silva;
+nombre_no_jazz = Ana;
+apellido_no_pop = Mendoza;
+musica_clasica = Salsa;
+musica_pop = Merengue;
+musica_jazz = Bachata;

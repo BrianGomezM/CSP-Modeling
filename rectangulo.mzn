@@ -1,5 +1,5 @@
 include "globals.mzn";
-include "rectangulo.dzn";
+include "rectangulo_prueba_5.dzn";
 
 % =========================
 % 📥 Parámetros de entrada
@@ -41,8 +41,9 @@ constraint sum([sizes[i]*sizes[i] | i in 1..n]) = W*H;
 % Fijar primer cuadrado
 constraint x[1] = 0 /\ y[1] = 0;
 
-% Ordenar cuadrados por tamaño descendente
-constraint forall(i in 1..n-1)(sizes[i] >= sizes[i+1]);
+% 🔁 (Opcional) Ordenar cuadrados por tamaño descendente
+% Comentado para permitir cualquier orden
+% constraint forall(i in 1..n-1)(sizes[i] >= sizes[i+1]);
 
 % =========================
 % 🔗 Romper simetrías
@@ -60,10 +61,12 @@ array[1..2*n] of var int: posiciones =
 
 solve :: int_search(
     posiciones,
-    input_order,
-    indomain_min,
+    smallest,
+    indomain_split,
     complete
 ) satisfy;
+
+
 
 % =========================
 % 📤 Salida corregida

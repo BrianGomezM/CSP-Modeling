@@ -1,0 +1,24 @@
+% Definición de enumerados
+nombres = {Maria, Carlos, Sofia};
+apellidos = {Ramirez, Torres, Vazquez};
+genero_musicales = {Rock, Blues, Metal};
+
+% Valores posibles
+nombres_posibles = [Maria, Carlos, Sofia];
+apellidos_posibles = [Ramirez, Torres, Vazquez];
+musicas_posibles = [Rock, Blues, Metal];
+
+% Rango de edades
+edades = {22, 30, 35};
+
+% Parámetros de relaciones
+nombre_mayor = Sofia;
+apellido_clasico = Vazquez;
+nombre_edad_fija = Carlos;
+edad_fija = 30;
+apellido_excluido = Ramirez;
+nombre_no_jazz = Maria;
+apellido_no_pop = Torres;
+musica_clasica = Rock;
+musica_pop = Blues;
+musica_jazz = Metal;
