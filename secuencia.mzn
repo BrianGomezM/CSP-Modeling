@@ -56,7 +56,12 @@ constraint forall(i in RANGO)(
 );
 
 % ============= ESTRATEGIA DE BÚSQUEDA =============
-solve :: int_search(S, first_fail, indomain_min) satisfy;
+% solve satisfy;
+% solve :: int_search(S, first_fail, indomain_min) satisfy;
+% solve :: int_search(S, dom_w_deg, indomain_random) satisfy;
+% solve :: int_search(S, impact, indomain_split) satisfy; 
+solve :: int_search(S, most_constrained, indomain_median) satisfy;
+
 
 % ============= FORMATO DE SALIDA =============
 % Mostramos la solución en un formato legible y verificable
@@ -73,7 +78,7 @@ output [
     ) ++ 
     " ]\n\n",
     
-    % 2. Verificación detallada de cada número
+%     2. Verificación detallada de cada número
     "Verificacion:\n" ++
     concat(i in RANGO)(
         "El numero " ++ show(i) ++ " aparece " ++ 
