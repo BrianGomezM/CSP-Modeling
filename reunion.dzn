@@ -1,0 +1,18 @@
+% Número de personas
+n = 6;
+
+% Nombres de las personas
+nombres = ["ana", "pedro", "maria", "juan", "lucia", "carlos"];
+
+% Restricciones next: [1,2] significa que ana y pedro deben estar juntos
+num_next = 2;
+next = [| 1, 2,    % ana y pedro deben estar juntos
+         3, 4 |];  % maria y juan deben estar juntos
+
+% Restricciones separate: [5,6] significa que lucia y carlos deben estar separados
+num_separate = 1;
+separate = [| 5, 6 |];  % lucia y carlos deben estar separados
+
+% Restricciones distance: [2,5,2] significa que pedro y lucia deben estar a distancia máxima 2
+num_distance = 1;
+distance = [| 2, 5, 2 |];  % pedro y lucia deben estar a distancia máxima 2 

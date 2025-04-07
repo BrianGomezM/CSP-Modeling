@@ -72,13 +72,24 @@ constraint forall(bloque_fila, bloque_columna in rango_subcuadricula)(
     ]) = 45
 );
 
-% RESTRICCIONES DE SIMETRÍA
-% No sé aún.
 
 solve satisfy;
+% solve :: int_search(
+%    [solucion[i,j] | i,j in rango_valores],
+%    first_fail,
+%    indomain_min
+% ) satisfy;
+% solve :: int_search(
+%    [solucion[i,j] | i,j in rango_valores],
+%    input_order,
+%    indomain_min
+% ) satisfy;
+% solve :: int_search(
+%    [solucion[i,j] | i,j in rango_valores],
+%    smallest,
+%    indomain_median
+% ) satisfy;
 
-
-%restricciones de redundacia y simetría faltan, diferentes formas de solución -> califican
 
 % Formato de salida para visualizar la solución
 output [
