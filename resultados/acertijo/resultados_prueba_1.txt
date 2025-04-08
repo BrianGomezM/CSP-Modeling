@@ -1,0 +1,3 @@
+Nombre: Dario, Apellido: Gonzalez, Edad: 24, Musica: Clasica
+Nombre: Oscar, Apellido: Garcia, Edad: 25, Musica: Jazz
+Nombre: Juan, Apellido: Lopez, Edad: 26, Musica: Pop

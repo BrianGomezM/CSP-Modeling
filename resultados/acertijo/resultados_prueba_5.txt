@@ -1,0 +1,3 @@
+Nombre: Diego, Apellido: Ruiz, Edad: 18, Musica: Flamenco
+Nombre: Elena, Apellido: Jimenez, Edad: 20, Musica: Rumba
+Nombre: Pablo, Apellido: Herrera, Edad: 22, Musica: Copla

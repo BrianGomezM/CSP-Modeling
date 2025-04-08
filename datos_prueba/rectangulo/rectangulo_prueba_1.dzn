@@ -1,5 +1,3 @@
-% Archivo: rectangulo.dzn
-
 n = 6; % Número de cuadrados
 W = 5; % Anchura del rectángulo
 H = 4; % Altura del rectángulo

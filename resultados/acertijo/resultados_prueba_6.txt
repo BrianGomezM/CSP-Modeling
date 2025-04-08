@@ -1,0 +1,3 @@
+Nombre: JuanCarlos, Apellido: Delgado, Edad: 50, Musica: Bolero
+Nombre: AnaMaria, Apellido: SanMartin, Edad: 55, Musica: Folklore
+Nombre: LuisMiguel, Apellido: DeLaCruz, Edad: 60, Musica: Tango

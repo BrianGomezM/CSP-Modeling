@@ -1,0 +1,9 @@
+Cuadrado 1 (10x10): (0,0)-(10,10)
+Cuadrado 2 (10x10): (0,10)-(10,20)
+Cuadrado 3 (10x10): (0,20)-(10,30)
+Cuadrado 4 (10x10): (0,30)-(10,40)
+Cuadrado 5 (10x10): (0,40)-(10,50)
+Cuadrado 6 (5x5): (0,50)-(5,55)
+Cuadrado 7 (5x5): (5,50)-(10,55)
+
+Rectángulo completado: 10x55

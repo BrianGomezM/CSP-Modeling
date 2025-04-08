@@ -1,8 +1,8 @@
-% Dimensiones del tablero
+% Dimensiones
 filas = 8;
 columnas = 8;
 
-% Definición de las pistas
+%Pistas
 tipo_celda = array2d(1..filas, 1..columnas, [
     NEGRA,  NEGRA,  NEGRA,  SUMA_V,   SUMA_V,  NEGRA,   NEGRA,  NEGRA,
     NEGRA,  NEGRA,  SUMA_H,  BLANCA,  BLANCA,  SUMA_V,  NEGRA,  NEGRA,
@@ -14,7 +14,7 @@ tipo_celda = array2d(1..filas, 1..columnas, [
     NEGRA,  NEGRA,  NEGRA,   SUMA_H,  BLANCA,  BLANCA,  NEGRA,   NEGRA
 ]);
 
-% Pistas para sumas horizontales
+%Pistas  horizontales
 pistas_h = array2d(1..filas, 1..columnas, [
      0,   0,   0,   0,   0,   0,   0,   0,
      0,   0,   9,   0,   0,   0,   0,   0, 
@@ -27,7 +27,7 @@ pistas_h = array2d(1..filas, 1..columnas, [
 ]);
 
 
-% Pistas para sumas verticales
+%Pistas verticales
 pistas_v = array2d(1..filas, 1..columnas, [
      0,   0,   0,  10,  15,   0,   0,   0,
      0,   0,   0,   0,   0,  13,   0,   0, 

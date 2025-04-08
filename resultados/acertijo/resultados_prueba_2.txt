@@ -1,0 +1,3 @@
+Nombre: Ana, Apellido: Martinez, Edad: 28, Musica: Rock
+Nombre: Luis, Apellido: Perez, Edad: 32, Musica: Electronica
+Nombre: Carla, Apellido: Rodriguez, Edad: 35, Musica: Salsa

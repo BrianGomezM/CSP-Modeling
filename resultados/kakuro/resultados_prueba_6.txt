@@ -1,0 +1,8 @@
+X	    X	    X	    10V	    15V	    X	    X	    X	
+X	    X	    9H	    2	    7	    13V	    X	    X	
+X	    7V	    24H/20V	7	    8	    9	    23V	    X	
+7H	    2	    4	    1	    12H	    4	    8	    3V	
+12H	    5	    7	    14V	    X	    10H/8V	9	    1	
+X	    14H	    9	    5	    9H/17V	1	    6	    2	
+X	    X	    22H	    9	    8	    5	    X	    X	
+X	    X	    X	    11H	    9	    2	    X	    X

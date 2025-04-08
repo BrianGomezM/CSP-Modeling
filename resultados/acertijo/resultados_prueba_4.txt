@@ -1,0 +1,3 @@
+Nombre: Maria, Apellido: Vazquez, Edad: 22, Musica: Rock
+Nombre: Carlos, Apellido: Torres, Edad: 30, Musica: Metal
+Nombre: Sofia, Apellido: Ramirez, Edad: 35, Musica: Blues

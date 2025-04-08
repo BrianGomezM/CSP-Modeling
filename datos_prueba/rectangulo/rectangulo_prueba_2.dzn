@@ -1,4 +1,4 @@
-n = 9;% Número de cuadrados
-W = 4;% Anchura del rectángulo
-H = 8;% Altura del rectángulo
-sizes = [4, 3, 1, 1, 1, 1, 1, 1, 1];
+n = 9; % Número de cuadrados
+W = 4; % Anchura del rectángulo
+H = 8; % Altura del rectángulo
+sizes = [4, 3, 1, 1, 1, 1, 1, 1, 1]; % Tamaño de cada cuadrado

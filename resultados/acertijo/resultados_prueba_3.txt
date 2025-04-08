@@ -1,0 +1,3 @@
+Nombre: Ana, Apellido: Castro, Edad: 40, Musica: Salsa
+Nombre: Pedro, Apellido: Mendoza, Edad: 41, Musica: Bachata
+Nombre: Lucia, Apellido: Silva, Edad: 42, Musica: Merengue

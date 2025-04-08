@@ -1,4 +1,4 @@
-n = 7;% Número de cuadrados
-W = 10;% Anchura del rectángul
-H = 55;% Altura del rectángulo
-sizes = [10,10,10, 10, 10, 5, 5]; % Mezcla de tamaños con múltiples soluciones posibles
+n = 7;  % Número de cuadrados
+W = 10; % Anchura del rectángul
+H = 55; % Altura del rectángulo
+sizes = [10,10,10, 10, 10, 5, 5]; % Tamaño de cada cuadrado

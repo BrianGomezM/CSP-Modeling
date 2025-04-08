@@ -1,0 +1,11 @@
+Cuadrado 1 (4x4): (0,0)-(4,4)
+Cuadrado 2 (3x3): (0,4)-(3,7)
+Cuadrado 3 (1x1): (0,7)-(1,8)
+Cuadrado 4 (1x1): (1,7)-(2,8)
+Cuadrado 5 (1x1): (2,7)-(3,8)
+Cuadrado 6 (1x1): (3,4)-(4,5)
+Cuadrado 7 (1x1): (3,5)-(4,6)
+Cuadrado 8 (1x1): (3,6)-(4,7)
+Cuadrado 9 (1x1): (3,7)-(4,8)
+
+Rectángulo completado: 4x8

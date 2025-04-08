@@ -1,0 +1,3 @@
+rectangulo:30.12-53:
+Warning: model inconsistency detected: expression evaluated to false
+=====UNSATISFIABLE=====
