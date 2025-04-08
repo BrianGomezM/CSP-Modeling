@@ -3,21 +3,21 @@
 include "globals.mzn";
 
 % Parámetros básicos del Sudoku
-int: tamano_subcuadricula=3;  % Tamaño de cada subcuadrícula (3 para Sudoku estándar)
-int: tamano_tablero = tamano_subcuadricula * tamano_subcuadricula;  % Tamaño total del tablero (9x9)
+int: tamano_subcuadricula=3;  % cada subcuadrícula es 3x3
+int: tamano_tablero = tamano_subcuadricula * tamano_subcuadricula;  % tablero 9x9
 
 % Definición de rangos para las restricciones
-set of int: rango_valores = 1..tamano_tablero;  % Valores posibles (1-9)
-set of int: rango_subcuadricula = 1..tamano_subcuadricula;  % Para iterar en subcuadrículas
+set of int: rango_valores = 1..tamano_tablero;  % números del 1 al 9
+set of int: rango_subcuadricula = 1..tamano_subcuadricula;  % para recorrer las subcuadrículas
 
 % Matrices del Sudoku
-array[1..tamano_tablero, 1..tamano_tablero] of 0..tamano_tablero: valores_iniciales; % Valores dados
-array[1..tamano_tablero, 1..tamano_tablero] of var rango_valores: solucion; % Matriz a resolver
+array[1..tamano_tablero, 1..tamano_tablero] of 0..tamano_tablero: valores_iniciales; % números que ya están puestos
+array[1..tamano_tablero, 1..tamano_tablero] of var rango_valores: solucion; % lo que vamos a resolver
 
 % RESTRICCIONES DEL SUDOKU
 
 % 1. Mantener los valores iniciales dados
-% Si hay un número en la posición inicial (>0), debe mantenerse en la solución
+% si hay un número en la posición inicial (>0), debe mantenerse en la solución
 constraint forall(i,j in rango_valores)(
     if valores_iniciales[i,j] > 0 then 
         solucion[i,j] = valores_iniciales[i,j] 
@@ -27,19 +27,19 @@ constraint forall(i,j in rango_valores)(
 );
 
 % 2. Restricción de filas únicas
-% Cada fila debe contener exactamente una vez cada número del 1 al 9
+% cada fila debe tener números del 1 al 9 sin repetir
 constraint forall(fila in rango_valores)(
     alldifferent([solucion[fila,columna] | columna in rango_valores])
 );
 
 % 3. Restricción de columnas únicas
-% Cada columna debe contener exactamente una vez cada número del 1 al 9
+% cada columna debe tener números del 1 al 9 sin repetir
 constraint forall(columna in rango_valores)(
     alldifferent([solucion[fila,columna] | fila in rango_valores])
 );
 
 % 4. Restricción de subcuadrículas 3x3
-% Cada subcuadrícula debe contener exactamente una vez cada número del 1 al 9
+% cada subcuadrícula debe tener números del 1 al 9 sin repetir
 constraint forall(bloque_fila, bloque_columna in rango_subcuadricula)(
     alldifferent([
         solucion[
@@ -71,7 +71,6 @@ constraint forall(bloque_fila, bloque_columna in rango_subcuadricula)(
         | i,j in 1..tamano_subcuadricula
     ]) = 45
 );
-
 
 solve satisfy;
 % solve :: int_search(

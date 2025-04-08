@@ -1,18 +1,33 @@
-% Número de personas
-n = 6;
+n = 10;
+personas = [
+  "jose",     % 1
+  "julian",   % 2
+  "diana",    % 3
+  "juan",     % 4
+  "david",    % 5
+  "claudia",  % 6
+  "edgar",    % 7
+  "mario",    % 8
+  "lina",     % 9
+  "andres"    % 10
+];
 
-% Nombres de las personas
-nombres = ["ana", "pedro", "maria", "juan", "lucia", "carlos"];
+% deben estar juntos
+next = array2d(1..3, 1..2, [
+  5, 8,   % david y mario
+  1, 4,   % jose y juan
+  9, 10   % lina y andres
+]);
 
-% Restricciones next: [1,2] significa que ana y pedro deben estar juntos
-num_next = 2;
-next = [| 1, 2,    % ana y pedro deben estar juntos
-         3, 4 |];  % maria y juan deben estar juntos
+% deben estar separados
+separate = array2d(1..2, 1..2, [
+  6, 7,   % claudia y edgar
+  3, 10   % diana y andres
+]);
 
-% Restricciones separate: [5,6] significa que lucia y carlos deben estar separados
-num_separate = 1;
-separate = [| 5, 6 |];  % lucia y carlos deben estar separados
-
-% Restricciones distance: [2,5,2] significa que pedro y lucia deben estar a distancia máxima 2
-num_distance = 1;
-distance = [| 2, 5, 2 |];  % pedro y lucia deben estar a distancia máxima 2 
+% distancia máxima entre personas (personas entre ellos <= M)
+distance = array2d(1..3, 1..3, [
+  6, 5, 2,  % claudia y david, máx 2 personas entre ellos
+  2, 3, 3,  % julian y diana, máx 3 personas entre ellos
+  7, 8, 1   % edgar y mario, máx 1 persona entre ellos
+]);

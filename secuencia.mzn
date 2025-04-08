@@ -1,21 +1,16 @@
 % Modelamiento e Implementación de CSPs
 % Taller 1 - Secuencia Mágica
-% Este problema consiste en encontrar una secuencia de n números donde cada número i
-% aparece exactamente S[i] veces en la secuencia.
 
-% ============= DEFINICIÓN DE PARÁMETROS =============
-int: n;  % Tamaño de la secuencia (se lee del archivo .dzn)
+
+int: n;  % Tamaño de la secuencia
 set of int: RANGO = 0..n-1;  % Define el rango de valores posibles en la secuencia
-                            % Va de 0 a n-1 porque los números en la secuencia
-                            % deben estar en este rango
+                            
 
-% ============= DEFINICIÓN DE VARIABLES =============
 % S[i] es un array donde cada posición i contiene cuántas veces aparece el número i
 % Por ejemplo, si S[2] = 3, significa que el número 2 aparece 3 veces en la secuencia
 % El dominio es 0..n-1 porque ningún número puede aparecer más veces que el tamaño de la secuencia
 array[RANGO] of var 0..n-1: S;
 
-% ============= RESTRICCIONES PRINCIPALES =============
 
 % 1. Restricción fundamental de la secuencia mágica:
 % Esta es la restricción que define qué es una secuencia mágica
@@ -30,23 +25,12 @@ constraint forall(i in RANGO)(
 );
 
 % ============= RESTRICCIONES REDUNDANTES =============
-% Las siguientes dos restricciones son redundantes porque se pueden deducir
-% de la restricción principal. Sin embargo, son muy útiles porque reducen
-% considerablemente el tamaño del árbol de búsqueda:
 
-% 1. Primera restricción redundante: x₀ + ... + xₙ₋₁ = n
-% Esta restricción es redundante porque:
-% - De la restricción principal sabemos que cada posición debe tener exactamente un número
-% - Por lo tanto, la suma de todas las apariciones debe ser igual a n
-% - Sin embargo, tenerla explícitamente ayuda al solver a podar ramas inválidas más rápido
+
+% 1. Primera restricción redundante: x₀ + ... + xₙ₋₁ = n -> La compartió el profe
 constraint sum(i in RANGO)(S[i]) = n;
 
-% 2. Segunda restricción redundante: (-1)x₀ + ... + (n-2)xₙ₋₁ = 0
-% Esta restricción es redundante porque:
-% - Se deduce de la propiedad fundamental de la secuencia mágica
-% - Si cada número i aparece S[i] veces, esta suma ponderada debe ser 0
-% - Ayuda al solver a identificar y eliminar combinaciones imposibles temprano
-% - Reduce significativamente el espacio de búsqueda
+% 2. Segunda restricción redundante: (-1)x₀ + ... + (n-2)xₙ₋₁ = 0 -> La compartió el profe
 constraint sum(i in RANGO)((i-1) * S[i]) = 0;
 
 % 3. Restricción de valor máximo
@@ -66,7 +50,7 @@ solve :: int_search(S, most_constrained, indomain_median) satisfy;
 % ============= FORMATO DE SALIDA =============
 % Mostramos la solución en un formato legible y verificable
 output [
-    % 1. Mostrar la secuencia completa
+    % 1. Mostrar la secuencia completa en forma de array
     "Secuencia Magica de longitud \(n):\n",
     "[ " ++ 
     concat(i in RANGO)(
@@ -78,7 +62,7 @@ output [
     ) ++ 
     " ]\n\n",
     
-%     2. Verificación detallada de cada número
+%     2. Verificación detallada de cada número para tener más claro cuantas veces se repite
     "Verificacion:\n" ++
     concat(i in RANGO)(
         "El numero " ++ show(i) ++ " aparece " ++ 
@@ -87,7 +71,7 @@ output [
         " veces (S[\(i)] = " ++ show(S[i]) ++ ")\n"
     ) ++
     
-    % 3. Verificación de la suma total
+    % 3. Verificación de la suma total para saber si se cumplió la restricción redundante.
     "\nSuma total de ocurrencias = " ++ show(sum(S)) ++ " (debe ser " ++ show(n) ++ ")\n"
 ];
 

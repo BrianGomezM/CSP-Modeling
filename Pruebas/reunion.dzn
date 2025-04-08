@@ -1,0 +1,11 @@
+n = 8;
+personas = ["jose", "julian", "diana", "juan", "david", "claudia", "edgar", "mario"];
+
+% Restricciones next: claudia (6) y mario (8) deben estar juntos
+next = [|6,8|];
+
+% Restricciones separate: claudia (6) y edgar (7) deben estar separados
+separate = [|6,7|];
+
+% Restricciones distance: claudia (6) y david (5) con distancia máxima 2
+distance = [|6,5,2|];
