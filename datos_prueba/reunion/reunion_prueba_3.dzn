@@ -1,0 +1,25 @@
+n = 8;
+
+personas = ["jose", "julian", "diana", "juan", "david", "claudia", "edgar", "mario"];
+
+num_next = 3;
+next = array2d(1..num_next, 1..2, [
+    1, 2,   % jose y julian juntos
+    5, 6,   % david y claudia juntos
+    7, 8    % edgar y mario juntos
+]);
+
+num_separate = 4;
+separate = array2d(1..num_separate, 1..2, [
+    1, 3,   % jose y diana separados
+    2, 4,   % julian y juan separados
+    3, 5,   % diana y david separados
+    4, 6    % juan y claudia separados
+]);
+
+num_distance = 3;
+distance = array2d(1..num_distance, 1..3, [
+    1, 4, 2,   % jose y juan máx 2
+    3, 6, 3,   % diana y claudia máx 3
+    2, 7, 5    % julian y edgar máx 5
+]);

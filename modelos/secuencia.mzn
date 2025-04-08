@@ -74,4 +74,3 @@ output [
     % 3. Verificación de la suma total para saber si se cumplió la restricción redundante.
     "\nSuma total de ocurrencias = " ++ show(sum(S)) ++ " (debe ser " ++ show(n) ++ ")\n"
 ];
-

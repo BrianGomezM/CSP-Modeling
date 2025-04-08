@@ -1,32 +1,86 @@
-# Modelamiento e Implementación de CSPs
+Taller1-PPR-2024/
+│
+├── README.txt
+├── Taller 1.pdf
+├── modelos/
+│   ├── sudoku.mzn
+│   ├── kakuro.mzn
+│   ├── secuencia.mzn
+│   ├── acertijo.mzn
+│   ├── reunion.mzn
+│   └── rectangulo.mzn
+├── datos_prueba/
+│   ├── sudoku/
+│   │   ├── sudoku_prueba1.dzn
+│   │   └── sudoku_prueba2.dzn
+│   ├── kakuro/
+│   │   ├── kakuro_prueba_1.dzn
+│   │   └── kakuro_prueba_2.dzn
+│   │   ├── kakuro_prueba_3.dzn
+│   │   └── kakuro_prueba_4.dzn
+│   │   ├── kakuro_prueba_5.dzn
+│   │   └── kakuro_prueba_6.dzn
+│   ├── secuencia/
+│   │   ├── rectangulo_prueba1.dzn
+│   │   ├── rectangulo_prueba2.dzn
+│   │   └── rectangulo_prueba6.dzn
+│   ├── acertijo/
+│   │   ├── acertijo_prueba_1.dzn
+│   │   ├── acertijo_prueba_2.dzn
+│   │   └── acertijo_prueba_3.dzn
+│   │   ├── acertijo_prueba_4.dzn
+│   │   ├── acertijo_prueba_5.dzn
+│   │   └── acertijo_prueba_6.dzn
+│   ├── reunion/
+│   │   ├── rectangulo_prueba1.dzn
+│   │   ├── rectangulo_prueba2.dzn
+│   │   └── rectangulo_prueba6.dzn
+│   ├── rectangulo/
+│   │   ├── rectangulo_prueba_1.dzn
+│   │   ├── rectangulo_prueba_2.dzn
+│   │   └── rectangulo_prueba_3.dzn
+│   │   ├── rectangulo_prueba_4.dzn
+│   │   ├── rectangulo_prueba_5.dzn
+│   │   └── rectangulo_prueba_6.dzn
+└── resultados/
+    ├── estadisticas_sudoku.csv
+    ├── estadisticas_kakuro.csv
 
-## Descripción
-Este repositorio contiene la solución del **Taller 1 de Modelamiento e Implementación de CSPs** (Programación por Restricciones), de la **Escuela de Ingeniería de Sistemas y Computación**.
 
-El objetivo es **modelar diferentes problemas como CSP** (*Constraint Satisfaction Problems*), implementarlos en **MiniZinc** y analizar las estrategias de búsqueda utilizadas.
+Taller 1 - Programación por Restricciones (2024)
 
-## Contenido
-Este repositorio incluye la resolución de los siguientes problemas:
+## Integrantes:
+- Brayan Gómez Muñoz - 2310016
+- Juan José Moreno Jaramillo - 2310038
 
-- **Sudoku** (`sudoku.mzn`): Modelado del Sudoku como un CSP, implementación en MiniZinc con diferentes estrategias de búsqueda y evaluación de su eficiencia.
-- **Kakuro** (`kakuro.mzn`): Modelado del Kakuro como un CSP, especificando variables, dominios y restricciones, con diferentes implementaciones y estrategias de distribución.
-- **Secuencia Mágica** (`secuencia.mzn`): Generación de secuencias mágicas en MiniZinc, con restricciones redundantes para optimizar el árbol de búsqueda.
-- **Acertijo Lógico** (`acertijo.mzn`): Modelado de un problema de lógica en MiniZinc para deducir la relación entre tres amigos, su edad y su música favorita.
-- **Ubicación de Personas en una Reunión** (`ubicacion.mzn`): Cálculo del orden en una fila según restricciones de proximidad, separación y distancia.
+## Descripción:
+Implementación en MiniZinc de los problemas CSP propuestos:
+1. Sudoku
+2. Kakuro
+3. Secuencia Mágica
+4. Acertijo Lógico
+5. Reunión de Personas
+6. Construcción de Rectángulo
 
-## Requisitos
-Para ejecutar los modelos es necesario contar con:
+## Instrucciones de Ejecución:
 
-- **MiniZinc instalado**
-- **Un entorno de desarrollo compatible con MiniZinc**
+### Requisitos:
+- MiniZinc 2.7.4 o superior
+- Solvers compatibles: Gecode, CP-SAT, Chuffed, HiGHS, etc.
 
-## Uso
-Para ejecutar cada modelo, abrir MiniZinc y cargar el archivo correspondiente. Luego, ejecutar el modelo para ver los resultados.
+### Ejecución general:
+Para cada problema, ejecutar desde la raíz del proyecto:
+```bash
+minizinc --solver <SOLVER> --statistics modelos/<problema>.mzn datos_prueba/<problema>/<prueba>.dzn
 
-### Ejemplo de ejecución:
-```sh
-minizinc sudoku.mzn
-```
+### Recomendaciones adicionales:
+1. **Para el informe PDF:**
+   - Se incluye capturas de las ejecuciones con estadísticas.
+   - Ejemplo de tabla para comparar solvers:
 
-🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+   | Solver  | Tiempo (ms) | Fallos | Nodos | Problema       |
+   |---------|-------------|--------|-------|----------------|
+   | Gecode  | 197         | 2      | 9     | rectangulo_p2  |
+   | CP-SAT  | 327         | 0      | -     | rectangulo_p2  |
 
+https://drive.google.com/drive/folders/1U7z_MOCHUuSicydULrCFfWpwEjIOEC3m?usp=drive_link
