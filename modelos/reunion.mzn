@@ -34,6 +34,12 @@ constraint forall(i in 1..num_distance)(
     abs(posiciones[distance[i,1]] - posiciones[distance[i,2]]) - 1 <= distance[i,3]
 );
 
+%Restricciones redundante (ejemplo: si A y B deben estar juntos, su rango está limitado)
+constraint forall(i in 1..num_next)(
+    posiciones[next[i,1]] >= 1 /\ posiciones[next[i,1]] <= n - 1 /\
+    posiciones[next[i,2]] >= 2 /\ posiciones[next[i,2]] <= n
+);
+
 % ============= SOLUCIÓN =============
 solve :: int_search(posiciones, first_fail, indomain_min) satisfy;
 

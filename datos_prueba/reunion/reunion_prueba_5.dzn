@@ -2,6 +2,14 @@ n = 12;
 
 personas = ["ana", "beto", "carla", "elena", "diego", "fabián", "gloria", "hector", "ines", "juan", "karla", "leo"];
 
+% Personas que deben estar juntas (exactamente a 1 posición de distancia)
+num_next = 3;
+next = array2d(1..num_next, 1..2, [
+    4, 6,    % elena y fabián
+    11, 12,  % karla y leo
+    8, 9     % hector e ines
+]);
+
 % Personas que deben estar separadas (> 1 posición)
 num_separate = 4;
 separate = array2d(1..num_separate, 1..2, [
@@ -9,14 +17,6 @@ separate = array2d(1..num_separate, 1..2, [
     3, 5,   % carla y diego
     6, 7,   % fabián y gloria
     10, 11  % juan y karla
-]);
-
-% Personas que deben estar juntas (exactamente a 1 posición de distancia)
-num_next = 3;
-next = array2d(1..num_next, 1..2, [
-    4, 6,    % elena y fabián
-    11, 12,  % karla y leo
-    8, 9     % hector e ines
 ]);
 
 % Distancia máxima entre dos personas
