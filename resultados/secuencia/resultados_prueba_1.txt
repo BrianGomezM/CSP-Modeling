@@ -1,0 +1,22 @@
+ENTRADA
+
+n = 100;
+
+SALIDA
+
+Secuencia Magica de longitud 10:
+[ 6, 2, 1, 0, 0, 0, 1, 0, 0, 0 ]
+
+Verificacion:
+El numero 0 aparece 6 veces (S[0] = 6)
+El numero 1 aparece 2 veces (S[1] = 2)
+El numero 2 aparece 1 veces (S[2] = 1)
+El numero 3 aparece 0 veces (S[3] = 0)
+El numero 4 aparece 0 veces (S[4] = 0)
+El numero 5 aparece 0 veces (S[5] = 0)
+El numero 6 aparece 1 veces (S[6] = 1)
+El numero 7 aparece 0 veces (S[7] = 0)
+El numero 8 aparece 0 veces (S[8] = 0)
+El numero 9 aparece 0 veces (S[9] = 0)
+
+Suma total de ocurrencias = 10 (debe ser 10)

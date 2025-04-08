@@ -1,0 +1,33 @@
+ENTRADA
+
+n = 20;
+
+
+SALIDA
+
+Secuencia Magica de longitud 20:
+[ 16, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 ]
+
+Verificacion:
+El numero 0 aparece 16 veces (S[0] = 16)
+El numero 1 aparece 2 veces (S[1] = 2)
+El numero 2 aparece 1 veces (S[2] = 1)
+El numero 3 aparece 0 veces (S[3] = 0)
+El numero 4 aparece 0 veces (S[4] = 0)
+El numero 5 aparece 0 veces (S[5] = 0)
+El numero 6 aparece 0 veces (S[6] = 0)
+El numero 7 aparece 0 veces (S[7] = 0)
+El numero 8 aparece 0 veces (S[8] = 0)
+El numero 9 aparece 0 veces (S[9] = 0)
+El numero 10 aparece 0 veces (S[10] = 0)
+El numero 11 aparece 0 veces (S[11] = 0)
+El numero 12 aparece 0 veces (S[12] = 0)
+El numero 13 aparece 0 veces (S[13] = 0)
+El numero 14 aparece 0 veces (S[14] = 0)
+El numero 15 aparece 0 veces (S[15] = 0)
+El numero 16 aparece 1 veces (S[16] = 1)
+El numero 17 aparece 0 veces (S[17] = 0)
+El numero 18 aparece 0 veces (S[18] = 0)
+El numero 19 aparece 0 veces (S[19] = 0)
+
+Suma total de ocurrencias = 20 (debe ser 20)

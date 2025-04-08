@@ -1,0 +1,31 @@
+n = 15;
+
+personas = ["alba", "bruno", "camila", "daniel", "emma", "felipe", "gisela", "hugo", "isabel", "jacobo", "kiara", "lucas", "marina", "nicolas", "olga"];
+
+% Personas que deben estar juntas (exactamente a 1 posición de distancia)
+num_next = 4;
+next = array2d(1..num_next, 1..2, [
+    3, 4,    % camila y daniel
+    7, 8,    % gisela y hugo
+    12, 13,  % lucas y marina
+    14, 15   % nicolas y olga
+]);
+
+% Personas que deben estar separadas (> 1 posición)
+num_separate = 5;
+separate = array2d(1..num_separate, 1..2, [
+    1, 2,    % alba y bruno
+    5, 6,    % emma y felipe
+    8, 9,    % hugo e isabel
+    10, 11,  % jacobo y kiara
+    13, 14   % marina y nicolas
+]);
+
+% Distancia máxima entre dos personas
+num_distance = 4;
+distance = array2d(1..num_distance, 1..3, [
+    2, 5, 3,   % bruno y emma máx 3 posiciones
+    4, 10, 5,  % daniel y jacobo máx 5 posiciones
+    1, 9, 4,   % alba e isabel máx 4
+    6, 15, 6   % felipe y olga máx 6
+]);

@@ -1,4 +1,4 @@
-% Modelamiento e Implementación de CSPs
+  % Modelamiento e Implementación de CSPs
 % Taller 1 - Secuencia Mágica
 
 
