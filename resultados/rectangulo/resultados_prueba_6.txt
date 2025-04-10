@@ -1,3 +1,12 @@
 rectangulo:30.12-53:
 Warning: model inconsistency detected: expression evaluated to false
 =====UNSATISFIABLE=====
+
+%% Este problema se planteó con el fin de verificar si las restricciones cumplen con su propósito.
+%% El modelo es insatisfacible debido a que el área total de los cuadrados a ubicar supera el área del rectángulo.
+%% El rectángulo tiene un área de 25 unidades cuadradas, mientras que los cuadrados tienen las siguientes dimensiones:
+%% - 4x4 = 16
+%% - 3x3 = 9
+%% - 2x2 = 4 (dos veces) = 8
+%% - 1x1 = 1
+%% En total, el área requerida es de 34 unidades cuadradas, lo cual excede el área disponible del rectángulo (25).

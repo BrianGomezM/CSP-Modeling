@@ -62,7 +62,6 @@ Implementación en MiniZinc de los problemas CSP propuestos:
 5. Reunión de Personas
 6. Construcción de Rectángulo
 
-## Instrucciones de Ejecución:
 
 ### Requisitos:
 - MiniZinc 2.7.4 o superior
