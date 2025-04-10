@@ -2,6 +2,8 @@ Taller1-PPR-2024/
 │
 ├── README.txt
 ├── Taller 1.pdf
+├───Informe
+└───Taller
 ├── modelos/
 │   ├── sudoku.mzn
 │   ├── kakuro.mzn
@@ -42,9 +44,13 @@ Taller1-PPR-2024/
 │   │   ├── rectangulo_prueba_4.dzn
 │   │   ├── rectangulo_prueba_5.dzn
 │   │   └── rectangulo_prueba_6.dzn
-└── resultados/
-    ├── estadisticas_sudoku.csv
-    ├── estadisticas_kakuro.csv
+├───resultados
+│       ├───acertijo
+│       ├───kakuro
+│       ├───rectangulo
+│       ├───reunion
+│       ├───secuencia
+│       └───sudoku
 
 
 Taller 1 - Programación por Restricciones (2024)
